@@ -1,5 +1,6 @@
 # Rajongoi9A-B
-Tagok: Koter Kristóf, Bogárdi Bence, Kéki Mihály /br
-Supercell Fan Hub /br
-Egy közösségi weboldal a Supercell játékokról. /br
+Tagok: Koter Kristóf, Bogárdi Bence, Kéki Mihály 
+Supercell Fan Hub 
+Egy közösségi weboldal a Supercell játékokról.  
+
 Frontend: HTML, CSS, JavaScript, Bootstrap
