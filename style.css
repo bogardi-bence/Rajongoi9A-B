@@ -43,6 +43,48 @@ p{
     line-height: 1.6;
 }
 
+ul{
+    margin-left: 40px;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+
+.navbar{
+    border-bottom: 2px solid #ff3c3c;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #ff3c3c !important;
+    letter-spacing: 1px;
+}
+
+
+blockquote{
+    font-style: italic;
+    border-left: 4px solid #ff3c3c;
+    padding-left: 15px;
+    margin-top: 30px;
+    color: #ddd;
+}
+
+
+footer{
+    background-color: black;
+    border-top: 2px solid #ff3c3c;
+    padding: 10px;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
 
 
 
