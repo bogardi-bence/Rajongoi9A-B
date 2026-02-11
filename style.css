@@ -58,6 +58,7 @@ li{
 
 .nav-link{
     transition: 0.3s;
+    font-size: 50px;
 }
 
 .nav-link:hover{
@@ -85,6 +86,13 @@ footer{
 html{
     scroll-behavior: smooth;
 }
+
+.logo{
+    width: 400px;
+    height: auto;
+}
+
+
 
 
 
