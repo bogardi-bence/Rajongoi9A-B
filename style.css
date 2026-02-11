@@ -1,123 +1,90 @@
+
 body{
-    margin:auto;
+    margin: auto;
     width: 90%;
-    background-size: 1em;
-    background-image: url('kepek/hatter.jpg');
+    background-color: #111;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 h1{
-    position: relative;    
-    top: -75px;
     color: white;
-    padding: 15px 25px;
-    background-color: white;
-    width:500px;
-    border-radius: 0 35px 35px 0;
-    margin-bottom: -75px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 10px red;   
 }
 
-p{
-    text-indent: 25px;
-    text-align: justify;
-}
 
 h2{
-    padding: 35px 5px 20px;
+    padding: 35px 5px 15px;
     font-weight: bold;
-    color: rgb(28, 36, 53);  
+    color: #ff3c3c;
+    border-bottom: 2px solid #ff3c3c;
+    display: inline-block;
 }
 
 h3{
     margin-bottom: 10px;
-    text-align: center;
-    color: rgb(28, 36, 53);
+    color: #ff3c3c;
 }
 
 h1, h2, h3, h4 {
-    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 90%;
-}
 
-.media p{
-    font-size: 90%;
+
+p{
+    text-indent: 25px;
     text-align: justify;
-    margin-top: 20px;
+    line-height: 1.6;
 }
 
-.termekkep{
-    width: 70%;
-    display: block;
-    margin: auto;  
+ul{
+    margin-left: 40px;
 }
 
-.kiskep{
-    width: 100px;
-    vertical-align: top;
+li{
+    margin-bottom: 5px;
 }
 
 
-.media{
-    background-color: rgb(182, 190, 206);
-    border: 3px dotted white;
-    border-radius: 0px 45px;
+.navbar{
+    border-bottom: 2px solid #ff3c3c;
 }
 
-#logo{
-    width:50%;
-    display: block;
-    margin: auto;
+.nav-link{
+    transition: 0.3s;
 }
 
-table{
-    font-size: smaller;
-    margin: auto;
-}
-       
-th {
-    text-align: center;
+.nav-link:hover{
+    color: #ff3c3c !important;
+    letter-spacing: 1px;
 }
 
-td{
-    padding: 2px 16px 2px;
-    border: 1px dotted rgb(0, 123, 255);
-}
-                  
-td:first-child {
-    font-weight: bold;
-    text-align: right;
-}
-                  
-td:nth-child(2) {
+
+blockquote{
     font-style: italic;
-     text-align: center;
-}
-                  
-.fejsor{
-    text-align: center;
-    color: white;
-    background-color:  rgb(0, 123, 255);
-}
-                  
-
-.footer {
-    height: 3em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: rgb(0, 123, 255);
-    text-align: center;
+    border-left: 4px solid #ff3c3c;
+    padding-left: 15px;
+    margin-top: 30px;
+    color: #ddd;
 }
 
-.footer > a {
-    color: white;
-    font-weight: bold;
+
+footer{
+    background-color: black;
+    border-top: 2px solid #ff3c3c;
+    padding: 10px;
 }
 
-.footer > a:hover {
-    color: orange;
+
+html{
+    scroll-behavior: smooth;
 }
-    
+
+
 
