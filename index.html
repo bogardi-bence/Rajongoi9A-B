@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Supercell</title>
+</head>
+
+<body class="bg-dark text-light">
+
+<!-- ===== CAROUSEL ===== -->
+<div class="container-fluid p-0 position-relative">
+
+  <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="kepek/01.png" class="d-block w-100" alt="Fiat 500">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/02.png" class="d-block w-100" alt="NASA Apollo">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/03.png" class="d-block w-100" alt="Ford Mustang">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <h1 class="display-4 fw-bold text-center position-absolute top-50 start-50 translate-middle text-white">
+    Supercell
+  </h1>
+</div>
+
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Supercell</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navmenu">
+      <ul class="navbar-nav fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="#ismerteto">Ismertető</a></li>
+        <li class="nav-item"><a class="nav-link" href="jatekok.html">Játékok</a></li>
+        <li class="nav-item"><a class="nav-link" href="quiz.html">Kvíz</a></li>
+        <li class="nav-item"><a class="nav-link" href="rolunk.html">Rólunk</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container py-5">
+
+<!-- ===== ISMERTETŐ ===== -->
+<h2 id="ismerteto" class="mb-4 border-bottom pb-2">Creator Expert – Ismertető</h2>
+
+<div class="row g-4">
+  <div class="col-lg-8">
+    <h3 class="fw-bold">A tégla a részletekben rejtőzik</h3>
+    <p>...</p>
+    <p><strong>Megszüntetjük</strong> a Creator Expert márkanevet...</p>
+    <img src="kepek/expertlogo.png" class="img-fluid mt-3" alt="Logo">
+  </div>
+
+  <div class="col-lg-4">
+    <h3 id="termekek" class="fw-bold">Creator Expert termékek</h3>
+
+    <div class="table-responsive">
+      <table class="table table-dark table-striped table-hover align-middle">
+        <thead class="table-light text-dark">
+          <tr>
+            <th>Készlet</th>
+            <th>Elemek</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-secondary text-dark">
+            <td colspan="2" class="text-center fw-bold">Járművek</td>
+          </tr>
+          <tr><td>Ford Mustang</td><td>1471</td></tr>
+          <tr><td>Fiat 500</td><td>960</td></tr>
+          <tr class="table-secondary text-dark">
+            <td colspan="2" class="text-center fw-bold">Épületek</td>
+          </tr>
+          <tr><td>Colosseum</td><td>9036</td></tr>
+          <tr><td>Rendőrkapitányság</td><td>2923</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== JÁRMŰVEK ===== -->
+<h2 id="jarmuvek" class="mt-5 mb-4 border-bottom pb-2">Járművek</h2>
+
+<div class="row g-4">
+
+  <div class="col-lg-4">
+    <div class="card bg-secondary h-100 shadow">
+      <img src="kepek/fiat500.jpg" class="card-img-top" alt="Fiat 500">
+      <div class="card-body">
+        <h5 class="card-title">Fiat 500 <small>(10271)</small></h5>
+        <p class="card-text">Ez a LEGO® Creator Expert Fiat 500...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card bg-secondary h-100 shadow">
+      <img src="kepek/mustang.jpg" class="card-img-top" alt="Mustang">
+      <div class="card-body">
+        <h5 class="card-title">Ford Mustang <small>(10265)</small></h5>
+        <p class="card-text">Fedezd fel a jellegzetes amerikai sportkocsit...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card bg-secondary h-100 shadow">
+      <img src="kepek/harley.jpg" class="card-img-top" alt="Harley">
+      <div class="card-body">
+        <h5 class="card-title">Harley-Davidson <small>(10269)</small></h5>
+        <p class="card-text">Ikonikus mérnöki munka LEGO formában...</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ===== ÉPÜLETEK ===== -->
+<h2 id="epuletek" class="mt-5 mb-4 border-bottom pb-2">Épületek</h2>
+
+<div class="row g-4">
+
+  <div class="col-lg-6">
+    <div class="card bg-secondary h-100 shadow">
+      <img src="kepek/rendornagy.jpg" class="card-img-top" alt="Rendőrkapitányság">
+      <div class="card-body">
+        <h5 class="card-title">Rendőrkapitányság (10278)</h5>
+        <p class="card-text">A Moduláris épületek gyűjteményének része...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="card bg-secondary h-100 shadow">
+      <img src="kepek/garazs.jpg" class="card-img-top" alt="Sarok garázs">
+      <div class="card-body">
+        <h5 class="card-title">Sarok garázs (10264)</h5>
+        <p class="card-text">Lenyűgöző modell levehető épületrészekkel...</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-black text-center py-3 mt-5">
+  <a href="https://lego.com/hu-hu/themes/creator-expert/about"
+     class="text-decoration-none text-light fw-bold"
+     target="_blank">
+     LEGO Creator Expert
+  </a>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
