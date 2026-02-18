@@ -140,5 +140,23 @@ html{
 
 }
 
+.kartya {
+max-width: 100%;
+height: auto;
+text-align: center;
+border-radius: 10px 10px 10px 10px ;
+background-color: #1f1e1e;
+
+}
+
+.kartya-kep {
+width: 120px;
+width: 120px;
+height: auto;
+display: block;
+margin: 10px auto;
+object-fit: contain;
+border-radius: 15px 15px 15px 15px;
+}
 
 
