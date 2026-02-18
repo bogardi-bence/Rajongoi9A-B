@@ -103,6 +103,13 @@ html{
     height: 70vh;          
     object-fit: contain;  
 }
+.company-img{
+    display:block;
+    margin:auto;
+    max-width:700px;
+    width:100%;
+    border-radius:20px;
+}
 
 
 
