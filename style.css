@@ -13,8 +13,7 @@ body{
 h1{
     color: white;
     letter-spacing: 5px;
-    font-weight: bold;
-    text-shadow: 0 0 10px red;   
+    font-weight: bold; 
 }
 
 
