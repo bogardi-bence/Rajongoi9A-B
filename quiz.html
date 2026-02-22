@@ -7,8 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <title>Rólunk</title>
+  <title>Kvíz</title>
 </head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
       <div class="container">
         <a href="index.html" class="navbar-brand">
@@ -46,13 +47,13 @@
       </div>
     </nav>
 
-<div class="container mt-5 d-flex justify-content-center align-items-center vh-100" class="quizcontainer">
-    <div class="card shadow p-4" style="width:600px; ">
+<div class="container d-flex justify-content-center align-items-center" style="padding: 120px 0;">
+    <div class="card shadow p-4 quizcontainer bg-dark">
         <h4 id="question">Kérdés helye</h4>
 
         <div id="answers" class="mt-3"></div>
 
-        <button id="nextBtn" class="btn btn-primary mt-3">
+        <button id="nextBtn" class="btn btn-primary mt-3 ">
             Következő
         </button>
 
@@ -65,26 +66,76 @@ const questions = [
     {
         question: "Mikor jött létre a Supercell?",
         answers: ["2011.08.24", "2010.05.14", "2009.09.07", "2011.12.03"],
-        correct: 2
+        correct: 1
     },
     {
         question: "Kik alapították?",
         answers: ["Mikko Kodisoja és Ikka Paananen", "Niko Derome és Visa Forstén", "Petri Styrman és Lassi Leppinen", "A Zynga alapítói"],
+        correct: 0
+    },
+    {
+        question: "Melyik városban alapították a Supercellt?",
+        answers: ["Helsinki", "Turku", "Espoo", "Tampere"],
         correct: 2
     },
     {
-        question: "Hány kiadatlan játékuk volt?",
-        answers: ["8", "11", "9", "10"],
-        correct: 3
+        question: "Melyik cégnél dolgoztak együtt az alapítók 2000-től?",
+        answers: ["Zynga", "Sumea", "Rovio", "EA"],
+        correct: 1
+    },
+    {
+        question: "Miért hagyta el a Supercell a Gunshine.net fejlesztését?",
+        answers: ["Fizetős lett a játék", "Kevés karakter volt benne", "Nem kötötte le sokáig a játékosokat és nehéz volt", "Túl sok negatív visszajelzést kaptak"],
+        correct: 2
     },
     {
         question: "Melyik volt az első nemzetközileg megjelent játékuk?",
         answers: ["Pets vs Orcs", "Clash of Clans", "Boom Beach", "Hay Day"],
-        correct: 4
+        correct: 3
+    },
+    {
+        question: "Melyik játék fejlesztését hagyták abba?",
+        answers: ["Pets vs Orcs", "Hay Day", "Boom Beach", "Squad Busters"],
+        correct: 0
     },
     {
         question: "Milyen fajta játék volt a Clash of Clans?",
         answers: ["Mezőgazdaság szimuláció", "Stratégiai bázis építő", "Felsőnézetes lövöldözős", "Free for All csapatépítő"],
+        correct: 1
+    },
+    {
+        question: "Melyik játék jelent meg 2016.03.02.-án?",
+        answers: ["Boom Beach", "Brawl Stars", "Squad Busters", "Clash Royale"],
+        correct: 3
+    },
+    {
+        question: "Melyik játék érte el a Clash of Clans szintű sikert?",
+        answers: ["Boom Beach", "Clash Royale", "Hay Day", "Squad Busters"],
+        correct: 1
+    },
+    {
+        question: "Melyik játék volt 2013-ban a negyedik legtöbbet termelő mobiljáték?",
+        answers: ["Clash of Clans", "Hay Day", "Boom Beach", "Brawl Stars"],
+        correct: 1
+    },
+    {
+        question: "Melyik játékban harcolnak a játékosok felső nézetből, csapatokban?",
+        answers: ["Clash of Clans", "Hay Day", "Brawl Stars", "Clash Royale"],
+        correct: 2
+    },
+    {
+        question: "Melyik játék használ karaktereket több Supercell játékból?",
+        answers: ["Squad Busters", "Boom Beach", "Brawl Stars", "Clash of Clans"],
+        correct: 0
+    },
+    {
+        question: "Melyik játéknak van modern katonai kinézete?",
+        answers: ["Clash of Clans", "Squad Busters", "Brawl Stars", "Boom Beach"],
+        correct: 3
+    },
+    {
+        question: "Hány kiadatlan játékuk volt?",
+        answers: ["8", "11", "9", "10"],
         correct: 2
     }
 ];
@@ -125,15 +176,19 @@ document.getElementById("nextBtn").addEventListener("click", function() {
     currentIndex++;
 
     if (currentIndex < questions.length) {
-        loadQuestion();
+        loadQuestion(); 
     } else {
-        document.querySelector(".card").innerHTML = `
-            <h3>Kvíz vége!</h3>
+        
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `
+            <h3 class="quizh3">Kvíz vége!</h3>
             <p>Pontszám: ${score} / ${questions.length}</p>
-            <button class="btn btn-success mt-3" onclick="location.reload()">
-                Újraindítás
-            </button>
+            <button class="btn btn-success mt-3" onclick="location.reload()">Újraindítás</button>
         `;
+
+        document.getElementById("question").style.display = "none";
+        document.getElementById("answers").style.display = "none";
+        document.getElementById("nextBtn").style.display = "none";
     }
 });
 

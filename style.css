@@ -160,6 +160,46 @@ object-fit: contain;
 border-radius: 15px 15px 15px 15px;
 }
 
+.quizh3 {
+    color: white;
+}
+
+.quizcontainer {
+    border: 3px solid yellow;
+    max-width: 1300px; width: 100%;
+}
+
+#nextBtn {
+background-color: #ba112a;
+border: 1px solid black;
+}
+
+#nextBtn:hover {
+    border: 1px solid black;
+    background-color: #3bc42b;
+}
+
+#question {
+    color: white;
+    text-transform: none;
+}
+
+.form-check-label {
+    color: white;
+}
+
+.form-check-label:hover {
+    background-color: #59363b;
+}
+
+.form-check-input:hover + .form-check-label {
+    background-color: #59363b;
+    border-radius: 5px;
+}
+#result h3,
+#result p {
+    color: white;
+}
 
 
 
