@@ -48,7 +48,7 @@
     </nav>
 
 <div class="container d-flex justify-content-center align-items-center" style="padding: 120px 0;">
-    <div class="card shadow p-4 quizcontainer bg-dark">
+    <div class="card shadow p-4 quizcontainer bg-dark text-white">
         <h4 id="question">Kérdés helye</h4>
 
         <div id="answers" class="mt-3"></div>
@@ -142,6 +142,7 @@ const questions = [
 
 let currentIndex = 0;
 let score = 0;
+let wrongAnswers = [];
 
 function loadQuestion() {
     const q = questions[currentIndex];
@@ -152,9 +153,9 @@ function loadQuestion() {
 
     q.answers.forEach((answer, index) => {
         answersDiv.innerHTML += `
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" value="${index}">
-                <label class="form-check-label">${answer}</label>
+            <div class="form-check text-start">
+                <input class="form-check-input" type="radio" name="answer" value="${index}" id="a${index}">
+                <label class="form-check-label" for="a${index}">${answer}</label>
             </div>
         `;
     });
@@ -169,8 +170,17 @@ document.getElementById("nextBtn").addEventListener("click", function() {
         return;
     }
 
-    if (parseInt(selected.value) === questions[currentIndex].correct) {
+    const selectedValue = parseInt(selected.value);
+    const q = questions[currentIndex];
+
+    if (selectedValue === q.correct) {
         score++;
+    } else {
+        wrongAnswers.push({
+            question: q.question,
+            your: q.answers[selectedValue],
+            correct: q.answers[q.correct]
+        });
     }
 
     currentIndex++;
@@ -178,11 +188,30 @@ document.getElementById("nextBtn").addEventListener("click", function() {
     if (currentIndex < questions.length) {
         loadQuestion(); 
     } else {
-        
+
+        let answersHTML = "";
+
+        if (wrongAnswers.length > 0) {
+            answersHTML += "<h5 class='mt-4'>Hibás válaszaid:</h5>";
+
+            wrongAnswers.forEach(item => {
+                answersHTML += `
+                    <div class="mt-3 text-start">
+                        <b>${item.question}</b><br>
+                        ❌ Te válaszod: ${item.your}<br>
+                        ✅ Helyes válasz: <span class="text-success">${item.correct}</span>
+                    </div>
+                `;
+            });
+        } else {
+            answersHTML = "<p class='mt-3 text-success'>Minden válasz helyes volt! 🎉</p>";
+        }
+
         const resultDiv = document.getElementById("result");
         resultDiv.innerHTML = `
             <h3 class="quizh3">Kvíz vége!</h3>
             <p>Pontszám: ${score} / ${questions.length}</p>
+            ${answersHTML}
             <button class="btn btn-success mt-3" onclick="location.reload()">Újraindítás</button>
         `;
 
