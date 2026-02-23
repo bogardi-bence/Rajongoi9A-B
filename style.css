@@ -201,6 +201,19 @@ border: 1px solid black;
     color: white;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
 
 
 
