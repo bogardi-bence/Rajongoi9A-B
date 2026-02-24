@@ -1,12 +1,11 @@
 
 body{
-    margin: auto;
-    width: 90%;
-    background-color: #111;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #f1f1f1;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #111;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -201,20 +200,10 @@ border: 1px solid black;
     color: white;
 }
 
-html, body {
-    height: 100%;
+.page-wrap{
+  width: 90%;
+  margin: 0 auto;
 }
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
-    flex: 1;
-}
-
-
 
 
 
